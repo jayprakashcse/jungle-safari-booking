@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Jungle Safari Permit Booking</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      Wild<span>Venture</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#parks">National Parks</a></li>
+      <li><a href="#safari">Safari Details</a></li>
+      <li><a href="#booking">Book Permit</a></li>
+    </ul>
+
+    <a href="#booking" class="book-btn">Book Now</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        Explore the Wild.<br>
+        Book Your Jungle Safari Permit.
+      </h1>
+
+      <p>
+        Choose your national park, select a safari zone and vehicle,
+        and generate your official jungle safari permit in minutes.
+      </p>
+
+      <button class="hero-btn" onclick="scrollToBooking()">
+        Book Safari Permit
+      </button>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stat">
+      <h2>4+</h2>
+      <p>National Parks</p>
+    </div>
+
+    <div class="stat">
+      <h2>2</h2>
+      <p>Safari Zones</p>
+    </div>
+
+    <div class="stat">
+      <h2>24/7</h2>
+      <p>Online Booking</p>
+    </div>
+
+    <div class="stat">
+      <h2>100%</h2>
+      <p>Digital Permit</p>
+    </div>
+  </section>
+
+  <!-- National Parks -->
+  <section class="section" id="parks">
+    <div class="section-title">
+      <h2>Popular National Parks</h2>
+      <p>Select from India’s most famous wildlife destinations</p>
+    </div>
+
+    <div class="park-container">
+
+      <div class="park-card">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Jim Corbett National Park">
+
+        <div class="park-info">
+          <h3>Jim Corbett National Park</h3>
+          <p>Uttarakhand | Famous for Royal Bengal Tigers and elephants.</p>
+          <span class="tag">Core & Buffer Zone</span>
+        </div>
+      </div>
+
+      <div class="park-card">
+        <img src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=800&q=80" alt="Ranthambore National Park">
+
+        <div class="park-info">
+          <h3>Ranthambore National Park</h3>
+          <p>Rajasthan | Known for tiger sightings and historic fort landscapes.</p>
+          <span class="tag">Tiger Reserve</span>
+        </div>
+      </div>
+
+      <div class="park-card">
+        <img 
+  src="https://images.unsplash.com/photo-1599071083737-9455c332bace?auto=format&fit=crop&w=800&q=80" 
+  alt="Kaziranga National Park">
+
+        <div class="park-info">
+          <h3>Kaziranga National Park</h3>
+          <p>Assam | Home of the one-horned rhinoceros and rich birdlife.</p>
+          <span class="tag">UNESCO Site</span>
+        </div>
+      </div>
+
+      <div class="park-card">
+        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80" alt="Bandhavgarh National Park">
+
+        <div class="park-info">
+          <h3>Bandhavgarh National Park</h3>
+          <p>Madhya Pradesh | High probability of tiger sightings and ancient ruins.</p>
+          <span class="tag">Tiger Reserve</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Safari Details -->
+  <section class="section" id="safari">
+    <div class="section-title">
+      <h2>Safari Options</h2>
+      <p>Choose your preferred vehicle and safari timing</p>
+    </div>
+
+    <div class="detail-grid">
+
+      <div class="detail-card">
+        <div class="icon">🚙</div>
+        <h3>Open 4x4 Gypsy</h3>
+        <p>Best for small groups and closer wildlife viewing experience.</p>
+      </div>
+
+      <div class="detail-card">
+        <div class="icon">🚌</div>
+        <h3>20-Seater Canter</h3>
+        <p>Ideal for larger groups and budget-friendly safari travel.</p>
+      </div>
+
+      <div class="detail-card">
+        <div class="icon">🌅</div>
+        <h3>Morning Safari</h3>
+        <p>Sunrise safari starting at 6:00 AM for the best wildlife activity.</p>
+      </div>
+
+      <div class="detail-card">
+        <div class="icon">🌇</div>
+        <h3>Afternoon Safari</h3>
+        <p>Sunset safari starting at 3:00 PM with beautiful forest views.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="section" id="booking">
+    <div class="section-title">
+      <h2>Book Your Safari Permit</h2>
+      <p>Fill the details below to generate your jungle safari permit</p>
+    </div>
+
+    <div class="booking-wrapper">
+
+      <!-- Booking Form -->
+      <div class="booking-card">
+        <h3>Visitor Details</h3>
+
+        <form id="safariForm">
+
+          <div class="form-grid">
+
+            <div>
+              <label for="park">National Park</label>
+              <select id="park" required>
+                <option value="">Select National Park</option>
+                <option>Jim Corbett National Park</option>
+                <option>Ranthambore National Park</option>
+                <option>Kaziranga National Park</option>
+                <option>Bandhavgarh National Park</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="zone">Safari Zone</label>
+              <select id="zone" required>
+                <option value="">Select Zone</option>
+                <option>Core Zone</option>
+                <option>Buffer Zone</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="vehicle">Safari Vehicle</label>
+              <select id="vehicle" required>
+                <option value="">Select Vehicle</option>
+                <option>Open 4x4 Gypsy</option>
+                <option>20-Seater Open Bus Canter</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="shift">Safari Shift</label>
+              <select id="shift" required>
+                <option value="">Select Shift</option>
+                <option>Morning Sunrise Safari - 6:00 AM</option>
+                <option>Afternoon Sunset Safari - 3:00 PM</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" placeholder="Enter full name" required>
+            </div>
+
+            <div>
+              <label for="visitDate">Safari Date</label>
+              <input type="date" id="visitDate" required>
+            </div>
+
+            <div>
+              <label for="idType">ID Proof Type</label>
+              <select id="idType" required>
+                <option value="">Select ID Type</option>
+                <option>Aadhaar Card</option>
+                <option>Passport</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="idNumber">ID Number</label>
+              <input type="text" id="idNumber" placeholder="Enter ID number" required>
+            </div>
+
+            <div class="full-width">
+              <label for="visitors">Number of Visitors</label>
+              <input type="number" id="visitors" min="1" max="20" value="1" required>
+            </div>
+
+            <div class="full-width camera-box">
+              <input type="checkbox" id="cameraFee">
+              <label for="cameraFee">Add Professional Camera Fee (Rs. 300)</label>
+            </div>
+
+          </div>
+
+          <button type="submit" class="submit-btn">
+            Generate Safari Permit
+          </button>
+
+        </form>
+      </div>
+
+      <!-- Permit Summary -->
+      <div class="summary-card">
+        <h3>Permit Summary</h3>
+
+        <div class="summary-item">
+          <span>National Park</span>
+          <strong id="summaryPark">-</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>Safari Zone</span>
+          <strong id="summaryZone">-</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>Vehicle</span>
+          <strong id="summaryVehicle">-</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>Shift</span>
+          <strong id="summaryShift">-</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>Visitor Name</span>
+          <strong id="summaryName">-</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>ID Proof</span>
+          <strong id="summaryId">-</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>Safari Date</span>
+          <strong id="summaryDate">-</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>Visitors</span>
+          <strong id="summaryVisitors">-</strong>
+        </div>
+
+        <div class="summary-item">
+          <span>Camera Fee</span>
+          <strong id="summaryCamera">No</strong>
+        </div>
+
+        <div class="total-box">
+          <p>Total Permit Amount</p>
+          <h2>Rs. <span id="summaryTotal">0</span></h2>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h3>WildVenture</h3>
+    <p>Wildlife National Park Jungle Safari Permit Booking System</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

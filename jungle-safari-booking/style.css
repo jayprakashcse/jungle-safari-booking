@@ -1,0 +1,416 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Colors */
+:root {
+  --green: #1b5e20;
+  --green-light: #2e7d32;
+  --yellow: #f9a825;
+  --cream: #fdfaf3;
+  --dark: #1f2937;
+  --gray: #6b7280;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--dark);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 6%;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.logo span {
+  color: var(--yellow);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--green);
+}
+
+.book-btn {
+  background-color: var(--green);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 88vh;
+  background-image:
+    linear-gradient(rgba(10, 35, 20, 0.65), rgba(10, 35, 20, 0.65)),
+     url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80'); 
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  margin: 15px auto 30px;
+  max-width: 650px;
+  font-size: 17px;
+  opacity: 0.9;
+}
+
+.hero-btn {
+  background-color: var(--yellow);
+  color: #222;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  justify-items: center;
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: white;
+}
+
+.stat h2 {
+  color: var(--green);
+  font-size: 32px;
+}
+
+.stat p {
+  color: var(--gray);
+}
+
+/* Sections */
+.section {
+  padding: 70px 6%;
+}
+
+.section-title,
+.park-container,
+.detail-grid,
+.booking-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  font-size: 34px;
+  color: var(--green);
+}
+
+.section-title p {
+  color: var(--gray);
+  margin-top: 8px;
+}
+
+/* National Park Cards */
+.park-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.park-card {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.park-card:hover {
+  transform: translateY(-8px);
+}
+
+.park-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.park-info {
+  padding: 20px;
+}
+
+.park-info h3 {
+  color: var(--green);
+  margin-bottom: 8px;
+}
+
+.park-info p {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 15px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e8f5e9;
+  color: var(--green);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Booking Section */
+.booking-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.booking-card,
+.summary-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+.camera-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f3f4f6;
+  padding: 14px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.camera-box input {
+  width: auto;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 20px;
+  background-color: var(--green);
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: var(--green-light);
+  transform: translateY(-2px);
+}
+
+/* Permit Summary */
+.summary-card h3 {
+  color: var(--green);
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #e5e7eb;
+  font-size: 15px;
+}
+
+.total-box {
+  margin-top: 20px;
+  background-color: var(--green);
+  color: white;
+  padding: 18px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.total-box h2 {
+  font-size: 28px;
+} 
+
+
+/* Safari Details */
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.detail-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+}
+
+.detail-card .icon {
+  font-size: 35px;
+}
+
+.detail-card h3 {
+  margin: 10px 0;
+  color: var(--green);
+}
+
+.detail-card p {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+
+/* Mobile responsive design */
+@media (max-width: 1050px) {
+  .park-container,
+  .detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 850px) {
+  .booking-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .park-container,
+  .detail-grid,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-inline: 20px;
+  }
+
+  .booking-card,
+  .summary-card {
+    padding: 20px;
+  }
+}
